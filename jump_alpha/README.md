@@ -24,20 +24,20 @@ ai_research_bot/
 ├── main.py                      # Telegram bot entrypoint
 ├── config/
 │   └── settings.py              # API keys, constants
-│   └── sources.py               # All URLs + tooling for scraping
+│   └── sources.py               # URLs and scraping tools
 ├── modules/
-│   ├── pipeline.py              # Master orchestration logic
-│   ├── tokenomics.py
-│   ├── onchain.py
-│   ├── sentiment.py
-│   ├── whales_vcs.py
-│   └── formatter.py             # Markdown / Telegram message builder
+│   ├── pipeline.py              # Orchestration logic
+│   ├── tokenomics.py            # Tokenomics analysis
+│   ├── onchain.py               # On-chain analysis
+│   ├── sentiment.py             # Sentiment analysis
+│   ├── whales_vcs.py            # Whales and VCs analysis
+│   └── formatter.py             # Message formatting
 ├── prompts/
-│   └── one_liner.txt
-│   └── bull_bear.txt
-├── .env                         # API tokens (Telegram, Helius, etc.)
-├── requirements.txt
-└── README.md
+│   └── one_liner.txt            # One-liner prompts
+│   └── bull_bear.txt            # Bullish/bearish prompts
+├── .env                         # API tokens
+├── requirements.txt             # Project dependencies
+└── README.md                    # Project overview
 ```
 
 ## License
