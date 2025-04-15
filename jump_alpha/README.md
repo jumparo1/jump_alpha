@@ -35,6 +35,8 @@ ai_research_bot/
 ├── prompts/
 │   └── one_liner.txt            # One-liner prompts
 │   └── bull_bear.txt            # Bullish/bearish prompts
+├── outputs/                     # Research output files
+├── jump_alpha/                  # Main application logic
 ├── .env                         # API tokens
 ├── requirements.txt             # Project dependencies
 └── README.md                    # Project overview
