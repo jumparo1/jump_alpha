@@ -1,0 +1,12 @@
+# Sources for Research Data
+
+1. CoinMarketCap - Current price and market cap
+2. CoinGecko - Token metrics and analytics
+3. DexScreener - On-chain trading metrics
+4. Holderscan - Holder distribution and activity
+5. Etherscan - Wallet transactions and balances
+6. Glassnode - Blockchain data analytics
+7. Medium - Project updates and insights
+8. Crunchbase - VC investment information
+9. Social Blade - Social media growth metrics
+10. Project GitHub - Technical documentation and code 

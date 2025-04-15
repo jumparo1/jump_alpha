@@ -1,0 +1,7 @@
+# requirements.txt
+# This file lists the Python dependencies for the AI Research Bot.
+
+requests
+python-dotenv
+pandas
+numpy 
