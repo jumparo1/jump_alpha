@@ -1,5 +1,8 @@
 # AI Research Bot
 
+## Quick Overview
+Jump Alpha is an advanced AI-driven Telegram bot that specializes in on-chain cryptocurrency analysis. It provides real-time insights and analytics, helping users make informed decisions in the crypto market.
+
 ## Overview
 The AI Research Bot is a Telegram bot designed to perform on-chain analysis and provide insights into various cryptocurrency projects. It leverages multiple modules to gather data, analyze sentiment, and format results for easy consumption.
 
