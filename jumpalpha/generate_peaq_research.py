@@ -105,4 +105,5 @@ Data Sources:
 
 if __name__ == "__main__":
     output_path = create_quick_research(peaq_data)
-    print(f"PEAQ quick research generated and saved to: {output_path}") 
+    print(f"PEAQ quick research generated and saved to: {output_path}")
+    print(report_data) 

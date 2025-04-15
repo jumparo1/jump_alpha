@@ -167,4 +167,130 @@ Data Sources:
 
 if __name__ == "__main__":
     output_path = create_quick_research(aave_data)
-    print(f"AAVE quick research generated and saved to: {output_path}") 
+    print(f"AAVE quick research generated and saved to: {output_path}")
+
+flare_data = {
+    'symbol': 'FLARE',
+    'quick_overview': '''Moat 🛡️: Description of Flare's unique features and market position.
+
+Users 👤: Target audience and user base.
+
+Token 💰: $FLARE | Token details and economic model.
+
+Forkability 🌀: Open-source aspects and competitive edge.
+
+Users/Nodes 📈: Key metrics and user statistics.
+
+Social 📣: Community presence and engagement.
+
+Team 🧠: Founders and core team details.
+
+Bullish 🟢: Positive aspects and growth potential.
+
+Bearish 🔴: Challenges and risks.
+
+VC / Whales 🐳: Major investors and token holders.''',
+    
+    'futures_stats': '''Futures 📊: Key futures statistics and market sentiment.
+
+Top Exchanges:
+- Exchange 1: Details
+- Exchange 2: Details
+
+Liquidations:
+- 24h: Details
+
+Volume:
+- 24h Perp: Details
+- 24h Spot: Details
+
+Market Sentiment:
+- OI Trend: Details
+- Funding Trend: Details
+- Liquidation Risk: Details
+
+Historical Context:
+- 7d OI Change: Details
+- 30d Volume Avg: Details
+- ATH OI: Details
+
+Platform Metrics:
+- TVL: Details
+- Daily Active Users: Details
+- Markets: Details
+- Chains: Details
+- Average APY: Details''',
+    
+    'onchain_activity': '''On-chain Activity ��:
+
+Holder Metrics:
+- Total Holders: Details
+- Top 100 Holders: Details
+- Top 10 Holders: Details
+- Average Holder Size: Details
+- Holder Growth (24h): Details
+- Active Holders (24h): Details
+- Holder Distribution: Details
+
+Top 20 Holders Activity (24h):
+1. Address 1: Activity
+2. Address 2: Activity
+...
+
+Key Observations:
+- Net accumulation: Details
+- Exchange flows: Details
+- Institutional interest: Details
+- DeFi activity: Details
+- Staking activity: Details
+
+Data Sources:
+- Source 1
+- Source 2
+- Source 3''',
+    
+    'bull_bear_thesis': '''## Comprehensive Bullish & Bearish Thesis
+
+### Bullish Thesis 🟢
+1. **Strong Market Position**
+   - Description
+
+2. **Technical Innovation**
+   - Description
+
+3. **Market Metrics**
+   - Description
+
+4. **Community & Governance**
+   - Description
+
+5. **Financial Health**
+   - Description
+
+### Bearish Thesis 🔴
+1. **Competitive Pressure**
+   - Description
+
+2. **Regulatory Risks**
+   - Description
+
+3. **Market Risks**
+   - Description
+
+4. **Technical Challenges**
+   - Description
+
+5. **Economic Factors**
+   - Description
+
+### Key Risk Factors to Monitor
+1. Factor 1
+2. Factor 2
+3. Factor 3
+4. Factor 4
+5. Factor 5'''
+}
+
+if __name__ == "__main__":
+    output_path = create_quick_research(flare_data)
+    print(f"Flare quick research generated and saved to: {output_path}") 

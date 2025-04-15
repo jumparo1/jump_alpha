@@ -9,6 +9,8 @@ from modules.scraper import (
 from modules.tokenomics import fetch_tokenomics
 from modules.summarizer import generate_one_liner, generate_bull_bear
 from pathlib import Path
+from telegram import InputFile
+from modules.research_agent import run_full_pipeline
 
 def get_project_info():
     print("\nEnter project information:")
@@ -90,6 +92,21 @@ def run_research(project_info):
     with open(output_file, "w") as f:
         f.write(output)
     print(f"\nAnalysis complete! Results saved to {output_file}")
+
+def handle_research(update, context):
+    args = context.args
+    if not args:
+        update.message.reply_text("Usage: /research <project name>")
+        return
+
+    name = args[0]
+    website = args[1] if len(args) > 1 else None
+    twitter = args[2] if len(args) > 2 else None
+
+    file_path = run_full_pipeline(name)
+
+    with open(file_path, "rb") as f:
+        update.message.reply_document(document=InputFile(f), filename=file_path.split("/")[-1])
 
 if __name__ == "__main__":
     project_info = get_project_info()
