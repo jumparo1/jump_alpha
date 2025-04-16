@@ -1,5 +1,0 @@
-You're an expert crypto analyst. Given the project's homepage content:
-
-<<TEXT>>
-
-Please generate a concise, informative one-line summary of the following project description. The summary should capture the essence of the project, its purpose, and its key value proposition. Keep it under 100 characters.

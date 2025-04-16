@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 
 # Add src directory to sys.path
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -10,9 +11,10 @@ if SRC_DIR not in sys.path:
 from telegram import InputFile
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from dotenv import load_dotenv
-from agents.research_agent import run_full_pipeline
-from utils.formatter import format_telegram_report
-from data.scraper import scrape_all_sources
+from src.agents.research_agent import run_full_pipeline
+from src.utils.formatter import format_telegram_report
+from src.data.scraper import scrape_all_sources
+from src.utils.logger import logger
 
 load_dotenv()
 
@@ -31,7 +33,7 @@ async def handle_research(update, context: ContextTypes.DEFAULT_TYPE):
 
     try:
         # Run the full research pipeline
-        report = run_full_pipeline(name, website, twitter)
+        report = run_full_pipeline(name, project_url=website, twitter_handle=twitter)
         
         # Scrape data from all sources
         scraped_data = scrape_all_sources(name)
@@ -53,7 +55,7 @@ def research_ai_wayfinder():
     template = get_research_template(token_symbol)
     
     # Gather data using the run_full_pipeline function
-    report_data = run_full_pipeline(token_symbol, website="https://x.com/AIWayfinder")
+    report_data = run_full_pipeline(token_symbol, project_url="https://x.com/AIWayfinder")
     
     # Fill in the template with actual data
     filled_report = template.replace("[Insert Date]", "2025-04-14")  # Example of filling in a date
@@ -66,8 +68,9 @@ def research_ai_wayfinder():
     print(f"Report saved as {filename}")
 
 def main():
-    token = input("Enter token symbol (e.g., BABY): ").strip().upper()
-    report = run_full_pipeline(token)
+    token = input("Enter token: ").strip().lower()
+    twitter = input("Enter Twitter handle (e.g. @babylon_chain): ").strip().replace("@", "")
+    report = run_full_pipeline(token, twitter_handle=twitter)
     print(report)
 
 if __name__ == "__main__":
